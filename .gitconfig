@@ -1,0 +1,5 @@
+[user]
+        email = yuneg11@gmail.com
+        name = EungGu Yun
+[core]
+        excludesFile = ~/.gitignore
