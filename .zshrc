@@ -8,6 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 DISABLE_UPDATE_PROMPT="true"
 HIST_STAMPS="yyyy-mm-dd"
+export TPU_NAME=
 
 VSCODE=code
 
@@ -20,7 +21,7 @@ plugins=(
   per-directory-history
   tmux
   fasd
-  zsh-z
+  # zsh-z
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -38,4 +39,6 @@ fi
 
 setopt NO_NOMATCH
 
-export TPU_NAME="TPU"
+# TPU
+export XRT_TPU_CONFIG="localservice;0;localhost:51011"
+alias kill-tpu="lsof -w /lib/libtpu.so | grep 'python' | awk '{print $2}' | xargs -r kill -9"
