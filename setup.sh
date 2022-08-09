@@ -3,7 +3,6 @@ REPO_HOME=https://raw.githubusercontent.com/yuneg11/Cloud-TPU-Setup/master/
 
 cd $HOME
 
-
 # Python
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 9
 
@@ -22,7 +21,7 @@ git clone https://github.com/zsh-users/zsh-completions             ${ZSH_CUSTOM:
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git   ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 ## Change default shell
-sudo sed -i "s/\/home\/$USER:\/bin\/bash/\home\/$USER:\/bin\/zsh/g" /etc/passwd
+# sudo sed -i "s/\/home\/$USER:\/bin\/bash/\home\/$USER:\/bin\/zsh/g" /etc/passwd
 
 
 # Dotfiles
