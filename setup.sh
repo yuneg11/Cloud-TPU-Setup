@@ -21,16 +21,16 @@ git clone https://github.com/zsh-users/zsh-completions             ${ZSH_CUSTOM:
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git   ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 ## Change default shell
-# sudo sed -i "s/\/home\/$USER:\/bin\/bash/\home\/$USER:\/bin\/zsh/g" /etc/passwd
+sudo sed -i "s/\/home\/$USER:\/bin\/bash/\/home\/$USER:\/bin\/zsh/g" /etc/passwd
 
 
 # Dotfiles
-wget --header="Authorization: token $TOKEN" $REPO_HOME/.zshrc -O $HOME/.zshrc
-wget --header="Authorization: token $TOKEN" $REPO_HOME/.p10k.zsh
-wget --header="Authorization: token $TOKEN" $REPO_HOME/.tmux.conf
-wget --header="Authorization: token $TOKEN" $REPO_HOME/.gitignore
-wget --header="Authorization: token $TOKEN" $REPO_HOME/.gitconfig
-touch .hushlogin
+wget --header="Authorization: token $TOKEN" $REPO_HOME/.zshrc     -O $HOME/.zshrc
+wget --header="Authorization: token $TOKEN" $REPO_HOME/.p10k.zsh  -O $HOME/.p10k.zsh 
+wget --header="Authorization: token $TOKEN" $REPO_HOME/.tmux.conf -O $HOME/.tmux.conf
+wget --header="Authorization: token $TOKEN" $REPO_HOME/.gitignore -O $HOME/.gitignore
+wget --header="Authorization: token $TOKEN" $REPO_HOME/.gitconfig -O $HOME/.gitconfig
+touch $HOME/.hushlogin
 
 sed -i "s/TPU_NAME=/TPU_NAME=\"$TPU_NAME\"/g" $HOME/.zshrc
 
