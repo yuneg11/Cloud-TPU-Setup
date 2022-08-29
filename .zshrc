@@ -41,4 +41,4 @@ setopt NO_NOMATCH
 
 # TPU
 export XRT_TPU_CONFIG="localservice;0;localhost:51011"
-alias kill-tpu="lsof -w /lib/libtpu.so | grep 'python' | awk '{print $2}' | xargs -r kill -9"
+alias kill-tpu="pkill python; lsof -w /lib/libtpu.so | grep 'python' | awk '{print $2}' | xargs -r kill -9"
