@@ -36,7 +36,7 @@ sudo rm -rm /etc/hostname
 echo "$HOSTNAME" | sudo tee /etc/hostname
 sudo hostnamectl set-hostname $HOSTNAME
 
-sed -i "s/TPU_NAME=/TPU_NAME=\"$TPU_NAME\"/g" $HOME/.zshrc
+sed -i "s/TPU_NAME=/TPU_NAME=\"$HOSTNAME\"/g" $HOME/.zshrc
 
 
 # PyTorch (Specify TPU version instead)
