@@ -20,8 +20,7 @@ plugins=(
   zsh-interactive-cd
   per-directory-history
   tmux
-  fasd
-  # zsh-z
+  z
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -34,7 +33,7 @@ ZSH_DISABLE_COMPFIX="true"
 export LS_COLORS="$LS_COLORS:ow=01;34"
 
 if [ -f ~/.zcompdump ]; then
-    rm ~/.zcompdump*
+    rm -rf ~/.zcompdump*
 fi
 
 setopt NO_NOMATCH
