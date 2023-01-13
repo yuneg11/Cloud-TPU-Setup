@@ -38,6 +38,9 @@ sudo hostnamectl set-hostname $HOSTNAME
 
 sed -i "s/TPU_NAME=/TPU_NAME=\"$HOSTNAME\"/g" $HOME/.zshrc
 
+# Timezone
+sudo timedatectl set-timezone 'Asia/Seoul'
+
 
 # PyTorch (Specify TPU version instead)
 # sudo bash /var/scripts/docker-login.sh
