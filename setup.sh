@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # TOKEN=$1  # Directly set from outside
 REPO_HOME=https://raw.githubusercontent.com/yuneg11/Cloud-TPU-Setup/master/
 TPU_NAME=$(curl -s -H 'Metadata-Flavor: Google' -X GET http://metadata.google.internal/computeMetadata/v1/instance/description)
